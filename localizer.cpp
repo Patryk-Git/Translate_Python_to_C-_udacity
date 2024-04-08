@@ -105,8 +105,8 @@ vector<vector<float> > move(int dy, int dx,
 
     for (int row = 0; row < height; row++) {
         for (int column = 0; column < width; column++) {
-            new_i = (row + dy ) % height;
-            new_j = (column + dx) % width;
+            new_i = (row + dy + height) % height;
+            new_j = (column + dx + width) % width;
             newGrid[new_i][new_j] = beliefs[row][column];
         }
     }
